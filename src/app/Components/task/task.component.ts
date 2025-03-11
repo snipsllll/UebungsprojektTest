@@ -10,11 +10,13 @@ import {DataService} from '../../Services/data.service';
 })
 export class TaskComponent {
 
-  @Input() task!: ITask;
+  @Input() task!: string;
 
   constructor(private dataService: DataService) {
 
   }
+
+  /*
 
   afterTaskChanged() {
     this.dataService.editTask(this.task);
@@ -30,6 +32,6 @@ export class TaskComponent {
 
   onMitarbeiterChange() {
     this.afterTaskChanged();
-  }
+  }*/
 
 }

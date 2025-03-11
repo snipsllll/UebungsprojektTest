@@ -4,14 +4,21 @@ import {DialogService} from '../../Services/dialog.service';
 import {DataService} from '../../Services/data.service';
 import {AnforderungDialogViewModel} from '../../Models/ViewModels/AnforderungDialogViewModel';
 import {ConfirmDialogViewModel} from '../../Models/ViewModels/ConfirmDialogViewModel';
+import {TaskComponent} from '../task/task.component';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-anforderung',
-  imports: [],
+  imports: [
+    TaskComponent,
+    NgForOf
+  ],
   templateUrl: './anforderung.component.html',
   styleUrl: './anforderung.component.css'
 })
 export class AnforderungComponent {
+
+  tasks = ["hi", "opfer", "schwanz", "cock", "Nudel"];
 
   @Input() anforderung!: IAnforderung;
   isMenuVisible: boolean = false;
